@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 12:48:58 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/19 13:21:44 by babischa         ###   ########.fr       */
+/*   Created: 2024/08/19 13:42:00 by babischa          #+#    #+#             */
+/*   Updated: 2024/08/19 16:32:21 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pushswap.h"
 
-int	is_duplicated(long int *array, long int num, int len)
+void	init_stack(t_node **stack, char	**av, int	ac)
 {
 	int	i;
 
 	i = 0;
-	while (i < len)
+
+	*stack = ft_calloc(1,sizeof(t_node));
+	(*stack)->value = ft_atol(av[i]);
+	(*stack)->prev = NULL;
+
+	while (i < ac)
 	{
-		if (num == array[i])
-			return (1);
+		
+		*stack = ft_calloc(1,sizeof(t_node));
+		(*stack)->value = ft_atol(av[i]);
+
 		i++;
 	}
-	return (0);
-}
-
-int	isnum(char *str)
-{
-	int	i;
-
-	i = 0;
-	if ((str[i] == '+' || str[i] == '-'))
-		i++;
-	while (str[i])
-	{
-		if ((str[i] >= '0' && str[i] <= '9'))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	ac++;
+//	printf("%ld\n", stack->value);
 }

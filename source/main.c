@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:41:31 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/18 18:39:40 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/19 16:17:50 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,27 @@
 int is_valid(char **av, int ac)
 {
 	long int	*array;
-//	int			zero;
 	int			i;
 
 	i = 0;
 	array = ft_calloc(ac, sizeof(long int));
 	while (*av)
 	{
-		if(isnum(*av))
+		if (isnum(*av))
 		{
 			array[i++] = ft_atol(*av);
+			if (is_duplicated(array, array[i - 1], i - 1) ||
+				array[i - 1] < INT_MIN || array[i - 1] > INT_MAX)
+			{
+				free(array);
+				return(0);
+			}
 		}
+		else
 		{
 			free(array);
 			return(0);
 		}
-		printf("%ld\n", array[i - 1]);
 		av++;
 	}
 	free(array);
@@ -40,15 +45,14 @@ int is_valid(char **av, int ac)
 int main(int ac, char **av)
 {
 	t_node	*a;
-	t_node	*b;
+	// t_node	b;
 
-	a = NULL;
-	b = NULL;
+	// b = NULL;
 	if (ac == 2 && !isnum(av[1]))
 		return(write(2, "Error\n", 6)/ 6);
 	if(!is_valid(av + 1, ac))
 		return(write(2, "Error\n", 6)/ 6);
-	// init_stack();
+	init_stack(&a, &av[1], ac - 1);
 	// if(!is_sorted(a))
 	// {
 	// 	if(stack_len(a) == 2)
@@ -58,12 +62,5 @@ int main(int ac, char **av)
 	// 	else
 	// 		pushswap()
 	// }
-
-
-	//atoi
-	//verificar se é num
-	//verificar se é maior que o intmin e menor que intmax
-	//verificar traramento de sinais
-	//não pode ser num repetido
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: babischa <babischa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 14:42:15 by babischa          #+#    #+#              #
-#    Updated: 2024/08/18 16:29:40 by babischa         ###   ########.fr        #
+#    Updated: 2024/08/19 16:44:43 by babischa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ HEADERS 	:=	-I ./include -I $(PRINTF)/include -I $(LIBFT)/include
 LIB			:=	$(PRINTF)/ft_printf.a $(LIBFT)/libft.a
 
 SRC_PUSH	:=	main \
-				utils
+				utils \
+				init_stack \
+				node_functions
 
 OBJ_PUSH	:=	$(addprefix objects/, $(addsuffix .o, $(SRC_PUSH)))
 

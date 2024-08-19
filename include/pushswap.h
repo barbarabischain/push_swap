@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:39:53 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/18 15:12:18 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/19 17:21:45 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,26 @@
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
-int	isnum(char *str);
-int error(void);
-
 typedef struct s_node
 {
-	int				*value;
-	int				*current_position;
-	int				*final_position;
-    struct s_node	*prev;
+	long int		value;
+//	int				*current_position;
+//	int				*final_position;
+	struct s_node	*prev;
 	struct s_node	*next;
-}t_node;
+}	t_node;
+
+/***		VALIDATION		***/
+int		isnum(char *str);
+int		is_duplicated(long int *array, long int num, int len);
+
+void	init_stack(t_node **stack, char	**av, int	ac);
+
+/***		NODE		***/
+t_node	*new_node(int content);
+t_node	*last_node(t_node *node);
+void	add_node_front(t_node **node, t_node *new);
+void	node_add_back(t_node **node, t_node *new);
+
 
 #endif
