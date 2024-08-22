@@ -6,7 +6,7 @@
 #    By: babischa <babischa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 14:42:15 by babischa          #+#    #+#              #
-#    Updated: 2024/08/19 16:44:43 by babischa         ###   ########.fr        #
+#    Updated: 2024/08/22 16:36:59 by babischa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,13 @@ LIB			:=	$(PRINTF)/ft_printf.a $(LIBFT)/libft.a
 SRC_PUSH	:=	main \
 				utils \
 				init_stack \
-				node_functions
+				node_functions \
+				print_stack \
+				swap_functions \
+				rotate_functions \
+				reverse_functions \
+				push_functions \
+				tester
 
 OBJ_PUSH	:=	$(addprefix objects/, $(addsuffix .o, $(SRC_PUSH)))
 

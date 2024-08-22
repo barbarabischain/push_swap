@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:41:31 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/19 16:17:50 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:08:24 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,18 @@ int is_valid(char **av, int ac)
 
 int main(int ac, char **av)
 {
-	t_node	*a;
-	// t_node	b;
+	t_node	*stack_a;
+	t_node	*stack_b;
 
-	// b = NULL;
+	stack_b = NULL;
+	if(ac < 2)
+		return (0);
 	if (ac == 2 && !isnum(av[1]))
 		return(write(2, "Error\n", 6)/ 6);
 	if(!is_valid(av + 1, ac))
 		return(write(2, "Error\n", 6)/ 6);
-	init_stack(&a, &av[1], ac - 1);
+	init_stack(&stack_a, &av[1], ac - 1);
+	//tester(&stack_a, &stack_b);
 	// if(!is_sorted(a))
 	// {
 	// 	if(stack_len(a) == 2)
