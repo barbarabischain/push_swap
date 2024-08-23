@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:39:53 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/22 17:06:43 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/23 20:09:10 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@
 
 typedef struct s_node
 {
-	int		value;
+	int				value;
 	struct s_node	*prev;
+//	int				index;
 	struct s_node	*next;
 }	t_node;
 

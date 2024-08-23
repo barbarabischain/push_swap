@@ -6,8 +6,10 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 19:56:43 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/18 12:49:18 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/23 15:23:49 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pushswap.h"
+
+void	tiny_sort(sta)

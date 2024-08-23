@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:41:31 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/22 17:08:24 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/23 20:32:31 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,17 @@ int main(int ac, char **av)
 		return(write(2, "Error\n", 6)/ 6);
 	init_stack(&stack_a, &av[1], ac - 1);
 	//tester(&stack_a, &stack_b);
-	// if(!is_sorted(a))
+	// if(!is_sorted(stack_a))
 	// {
-	// 	if(stack_len(a) == 2)
-	// 		sa(&a, );
-	// 	else if (stack_len(a) == 3)
-	// 		tiny_sort(&a);
-	// 	else
-	// 		pushswap()
-	// }
+	// 	if(stack_size(stack_a) == 2)
+	// 		sa(stack_a);
+	// 	else if (stack_size(stack_a) == 3)
+	// 	 	tiny_sort(&stack_a);
+		// else
+		// 	pushswap()
+//	}
+//	if(is_sorted)
+//		free_stack(stack_a, stack_b);
+//	print_stack(stack_a);
 	return (0);
 }

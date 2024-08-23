@@ -6,11 +6,13 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 12:48:58 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/22 17:06:32 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/23 20:18:51 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pushswap.h"
+
+/*as funçoes dão segfault quando manda uma stack vazia*/
 
 int	get_max_value(t_node	*stack)
 {
