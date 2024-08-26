@@ -18,7 +18,9 @@ void	print_stack(t_node *stack)
 	{
 		while (stack != NULL)
 		{
-			ft_printf("%d\n", stack->value);
+			ft_printf("value = %d\n", stack->value);
+			ft_printf("index =  %d\n\n", stack->index);
+
 			stack = stack->next;
 		}
 	}

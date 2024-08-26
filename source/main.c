@@ -55,6 +55,7 @@ int main(int ac, char **av)
 	if(!is_valid(av + 1, ac))
 		return(write(2, "Error\n", 6)/ 6);
 	init_stack(&stack_a, &av[1], ac - 1);
+	set_index(stack_a);
 	//tester(&stack_a, &stack_b);
 	// if(!is_sorted(stack_a))
 	// {
@@ -67,6 +68,7 @@ int main(int ac, char **av)
 //	}
 //	if(is_sorted)
 //		free_stack(stack_a, stack_b);
-//	print_stack(stack_a);
+	print_stack(stack_a);
+	(void)stack_b; 
 	return (0);
 }

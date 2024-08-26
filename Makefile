@@ -29,6 +29,7 @@ SRC_PUSH	:=	main \
 				rotate_functions \
 				reverse_functions \
 				push_functions \
+				index \
 				tester
 
 OBJ_PUSH	:=	$(addprefix objects/, $(addsuffix .o, $(SRC_PUSH)))

@@ -18,6 +18,7 @@ t_node	*new_node(int content)
 
 	new = ft_calloc(1, sizeof(t_node));
 	new->value = content;
+	new->index = -1;
 	new->next = NULL;
 	new->prev = NULL;
 	return (new);

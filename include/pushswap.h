@@ -29,7 +29,7 @@ typedef struct s_node
 {
 	int				value;
 	struct s_node	*prev;
-//	int				index;
+	int				index;
 	struct s_node	*next;
 }	t_node;
 
@@ -49,6 +49,7 @@ void	add_node_last(t_node **node, t_node *new);
 int		stack_size(t_node	*stack);
 void	print_stack(t_node *stack);
 
+
 /***		OPERATIONS		***/
 void	sa(t_node	*head);
 void	sb(t_node	*head);
@@ -63,10 +64,12 @@ void	pb(t_node	**stack_a, t_node	**stack_b);
 void	pa(t_node	**stack_a, t_node	**stack_b);
 
 /*	GET MAX - GET MIN	*/
-int	get_max_value(t_node	*stack);
-int	get_min_value(t_node	*stack);
+int		get_max_value(t_node	*stack);
+int		get_min_value(t_node	*stack);
+void 	set_index(t_node *stack);
+
 
 /*		TESTER		*/
-void tester(t_node	**stack_a, t_node	**stack_b);
+void	 tester(t_node	**stack_a, t_node	**stack_b);
 
 #endif

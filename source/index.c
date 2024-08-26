@@ -12,44 +12,34 @@
 
 #include "../include/pushswap.h"
 
-set_index(t_node	*stack)
+void set_index(t_node *stack)
 {
-	int		len;
-	int		i;
-	int		min;
+	int		index;
 	t_node	*tmp;
+	t_node	*min_node;
+	int		is_indexed;
 
-	i = 0;
-	len = stack_size(stack);
-	tmp = stack;
-	min = stack->value;
-
-	while (len > i)
+	index = 0;
+	while (index < stack_size(stack))
 	{
-		while (tmp != NULL)
+		tmp = stack;
+		min_node = NULL;
+		is_indexed = 0;
+
+		while(tmp != NULL)
 		{
-			if (min > stack->next->value)
-				min = stack->next->value;
+			if (tmp->index == -1)
+			{
+				if(!is_indexed || tmp->value < min_node->value)
+				{
+					min_node = tmp;
+					is_indexed = 1;
+				}
+			}
 			tmp = tmp->next;
 		}
-		tmp = stack;
-		i++;
+	if (min_node != NULL)
+		min_node->index = index++;
 	}
 }
-
-int	get_min_value(t_node	*stack)
-{
-	int	min;
-	int	len;
-
-	len = stack_size(stack);
-	min = stack->value;
-	while (len - 1 > 0)
-	{
-		if (min > stack->next->value)
-			 min = stack->next->value;
-		stack = stack->next;
-		len--;
-	}
-	return (min);
-}
+                                                                                                                           
