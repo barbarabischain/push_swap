@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 17:08:11 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/22 11:53:03 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/29 14:35:53 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	pb(t_node	**stack_a, t_node	**stack_b)
 	{
 		head = *stack_a;
 		*stack_a = head->next;
-		if(stack_size(*stack_a) > 0)
+		if (stack_size(*stack_a) > 0)
 			(*stack_a)->prev = NULL;
 		head->next = NULL;
 		if (*stack_b == NULL)
@@ -35,7 +35,6 @@ void	pb(t_node	**stack_a, t_node	**stack_b)
 		}
 	}
 	write(1, "pb\n", 3);
-
 }
 
 void	pa(t_node	**stack_a, t_node	**stack_b)
@@ -46,7 +45,7 @@ void	pa(t_node	**stack_a, t_node	**stack_b)
 	{
 		head = *stack_b;
 		*stack_b = head->next;
-		if(stack_size(*stack_b) > 0)
+		if (stack_size(*stack_b) > 0)
 			(*stack_b)->prev = NULL;
 		head->next = NULL;
 		if (*stack_a == NULL)
@@ -58,5 +57,4 @@ void	pa(t_node	**stack_a, t_node	**stack_b)
 		}
 	}
 	write(1, "pa\n", 3);
-
 }

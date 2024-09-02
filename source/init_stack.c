@@ -6,13 +6,13 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 13:42:00 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/21 17:21:15 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/29 14:30:18 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/pushswap.h"
 
-void	init_stack(t_node **stack, char	**av, int	ac)
+void	init_stack(t_node **stack, char	**av, int ac)
 {
 	int		i;
 	t_node	*tmp;

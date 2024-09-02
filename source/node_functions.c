@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:34:20 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/21 14:31:07 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/29 14:34:14 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	add_node_last(t_node **node, t_node *new)
 			last = last_node(*node);
 			last->next = new;
 			new->prev = last;
-
 	}
 }
 
@@ -60,7 +59,7 @@ int	stack_size(t_node	*stack)
 	int	i;
 
 	i = 0;
-	if(stack == NULL)
+	if (stack == NULL)
 		return (0);
 	while (stack)
 	{

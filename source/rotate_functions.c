@@ -6,7 +6,7 @@
 /*   By: babischa <babischa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 17:11:42 by babischa          #+#    #+#             */
-/*   Updated: 2024/08/22 14:24:06 by babischa         ###   ########.fr       */
+/*   Updated: 2024/08/29 15:00:35 by babischa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,11 @@ void	rr(t_node	**stack_a, t_node	**stack_b)
 		(*stack_a)->prev = NULL;
 		head_a->next = NULL;
 		add_node_last(stack_a, head_a);
-
 		head_b = *stack_b;
 		*stack_b = head_b->next;
-		(*stack_b)->prev = NULL; //seg fault
+		(*stack_b)->prev = NULL;
 		head_b->next = NULL;
 		add_node_last(stack_b, head_b);
-
 		write(1, "rr\n", 3);
 	}
 }

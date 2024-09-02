@@ -6,7 +6,7 @@
 #    By: babischa <babischa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 14:42:15 by babischa          #+#    #+#              #
-#    Updated: 2024/08/22 16:36:59 by babischa         ###   ########.fr        #
+#    Updated: 2024/08/29 20:15:23 by babischa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,14 @@ SRC_PUSH	:=	main \
 				utils \
 				init_stack \
 				node_functions \
-				print_stack \
 				swap_functions \
 				rotate_functions \
 				reverse_functions \
 				push_functions \
 				index \
-				tester
+				radix \
+				small_sort \
+				free_stack
 
 OBJ_PUSH	:=	$(addprefix objects/, $(addsuffix .o, $(SRC_PUSH)))
 
